@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="nadpis">Emoji</h1> 
+
+    <form>
+        <input id="kolkoEmoji">
+    </form>
+
+  <button onclick="pridajNovehoEmoji()">Pridaj Emoji</button>
+
+  <script>
+    function getRandom(number) {
+        return Math.floor(Math.random() * number);                  
+    }
+    console.log(getRandom(100));
+
+    function pridajNovehoEmoji() {
+        let kolkoEmoji = document.getElementById("kolkoEmoji");
+        const para = document.createElement("p");
+        para.className = "emoji";
+        for (let i = 0; i < kolkoEmoji.value; i++) {
+            para.innerHTML += "&#128" + getRandom(1000) + "; ";
+        }
+        
+        console.log(para);
+
+        document.body.append(para);
+    }
+  </script>
+  <style>
+            .nadpis{
+                text-align: center;
+                color: rgb(14, 24, 116);
+            }
+  </style>
+</body>
+</html>
