@@ -1,0 +1,10 @@
+.nadpis {
+    text-align: center;
+    color: rgb(14, 24, 116);
+    text-decoration: underline;
+    border: 3px solid greenyellow;
+    padding: 15px;
+    border-radius: 25px;
+    width: 33%;
+    margin: 0 auto;
+}
